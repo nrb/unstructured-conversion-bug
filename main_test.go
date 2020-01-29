@@ -59,6 +59,5 @@ func TestFromUnstructuredIntToFloatBug(t *testing.T) {
 
 	var newCRD apiextv1beta1.CustomResourceDefinition
 	err = runtime.DefaultUnstructuredConverter.FromUnstructured(obj.UnstructuredContent(), &newCRD)
-	// If there's no error, then the upstream issue is fixed, and we need to remove our workarounds.
 	require.NoError(t, err)
 }
